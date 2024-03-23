@@ -29,7 +29,6 @@ namespace first_lab
             buttonFilter.Text = "Add\nFilter";
             panel1.BackColor = Background.BackColor;
 
-
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -162,6 +161,37 @@ namespace first_lab
                 richTextBoxWelcome.Text = "Please enter a valid flight number.";
             }
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (ListBoxTickets.SelectedItem != null)
+            {
+                // Получаем выбранный объект
+                Plane planeToRemove = (Plane)ListBoxTickets.SelectedItem;
+
+                // Удаляем объект из списка объектов проекта
+                airport.Planes.Remove(planeToRemove);
+
+                // Обновляем список в ListBox
+                ListBoxTickets.DataSource = null;
+                ListBoxTickets.DataSource = airport.Planes;
+                ListBoxTickets.DisplayMember = "FlightNumber";
+            }
+        }
+
+        private void buttonDeleteAll_Click(object sender, EventArgs e)
+        {
+            // Удаляем все элементы из списка объектов проекта
+            airport.Planes.Clear();
+
+            // Убираем привязку источника данных
+            ListBoxTickets.DataSource = null;
+
+            // Очищаем ListBox
+            ListBoxTickets.Items.Clear();
+            presenter.ClearFile();
+        }
+
     }
 
 }

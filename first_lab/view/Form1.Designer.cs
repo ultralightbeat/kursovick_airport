@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonDeleteAll = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonFindIndex = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxFindIndex = new System.Windows.Forms.TextBox();
@@ -62,6 +64,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(234)))), ((int)(((byte)(232)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.buttonDeleteAll);
+            this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Controls.Add(this.buttonFindIndex);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBoxFindIndex);
@@ -91,6 +95,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1197, 618);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonDeleteAll
+            // 
+            this.buttonDeleteAll.AutoSize = true;
+            this.buttonDeleteAll.Font = new System.Drawing.Font("Bloom", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonDeleteAll.ForeColor = System.Drawing.Color.SkyBlue;
+            this.buttonDeleteAll.Location = new System.Drawing.Point(674, 510);
+            this.buttonDeleteAll.Name = "buttonDeleteAll";
+            this.buttonDeleteAll.Size = new System.Drawing.Size(115, 29);
+            this.buttonDeleteAll.TabIndex = 35;
+            this.buttonDeleteAll.Text = "Delete all";
+            this.buttonDeleteAll.UseVisualStyleBackColor = true;
+            this.buttonDeleteAll.Click += new System.EventHandler(this.buttonDeleteAll_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.AutoSize = true;
+            this.buttonDelete.Font = new System.Drawing.Font("Bloom", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonDelete.ForeColor = System.Drawing.Color.SkyBlue;
+            this.buttonDelete.Location = new System.Drawing.Point(674, 475);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(115, 29);
+            this.buttonDelete.TabIndex = 34;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonFindIndex
             // 
@@ -127,7 +157,7 @@
             this.buttonFilter.AutoSize = true;
             this.buttonFilter.Font = new System.Drawing.Font("Bloom", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonFilter.ForeColor = System.Drawing.Color.SkyBlue;
-            this.buttonFilter.Location = new System.Drawing.Point(600, 475);
+            this.buttonFilter.Location = new System.Drawing.Point(537, 475);
             this.buttonFilter.Name = "buttonFilter";
             this.buttonFilter.Size = new System.Drawing.Size(115, 29);
             this.buttonFilter.TabIndex = 30;
@@ -395,5 +425,7 @@
         private Button buttonFindIndex;
         private Label label1;
         private TextBox textBoxFindIndex;
+        private Button buttonDelete;
+        private Button buttonDeleteAll;
     }
 }

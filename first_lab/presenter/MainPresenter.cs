@@ -42,5 +42,9 @@ namespace first_lab.presenter
             FlightStatistics.UpdateStatistics(newPlane);
             return newPlane;
         }
+        public void ClearFile()
+        {
+            db.ClearFile();
+        }
     }
 }

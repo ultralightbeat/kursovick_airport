@@ -59,6 +59,10 @@ namespace first_lab.model
                 write.Close();
             }
         }
+        public void ClearFile()
+        {
+            File.WriteAllText("C:\\Users\\Kolya\\Desktop\\уни\\2 sem\\programming\\MyClassLibrary\\MyClassLibrary\\files\\id_data.txt", string.Empty);
+        }
         public Image GetImage(Plane selectedPlane)
         {
             return Image.FromFile(selectedPlane.foto);
